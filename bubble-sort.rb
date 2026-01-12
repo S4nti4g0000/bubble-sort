@@ -2,10 +2,21 @@ number_array = [4,3,78,2,0,2]
 
 def bubble_sort(arr)
 
-    temp_num = 0
-
-    arr.each_cons(2).with_index do |(current, next_num), i|
-        puts "#{current} at #{i} should change places with #{next_num}" if current > next_num        
+    (0...arr.length - 1).each do |num|
+        if arr[num] > arr[num+1]
+            p arr[num], arr[num+1] = arr[num+1], arr[num]
+            s
+        end        
     end
-    
+
+    arr
 end
+
+=begin
+    new_arr = arr.each.map do |element|
+        temp_num = current
+        if current > next_num            
+            [current = next_num, next_num = temp_num]
+        end
+    end
+=end
